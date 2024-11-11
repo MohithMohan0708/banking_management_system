@@ -1,0 +1,567 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #004080;
+    padding: 1em;
+    color: white;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 1em;
+    background: #fff;
+    border-radius: 5px;
+}
+
+form h2 {
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    margin-top: 1em;
+}
+
+input[type="text"], input[type="password"], input[type="number"], select {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+}
+
+button {
+    width: 100%;
+    padding: 0.7em;
+    background-color: #004080;
+    color: white;
+    border: none;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+/* index - css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+.index-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    background-image: url('/static/images/bank-pic.avif');
+    background-size: cover;  
+    background-position: center;
+}
+
+.index-body::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    filter: brightness(50%); 
+    z-index: -1; 
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 2rem;
+    color: #333333;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    margin-bottom: 15px;
+}
+
+.login-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #45a049;
+}
+
+.register-text {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.register-link {
+    color: #4CAF50;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+}
+
+
+/* login-page css */
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/static/images/login-pic.avif');
+    background-size: cover;
+}
+
+.login-body::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    filter: brightness(50%); 
+    z-index: -1; 
+}
+
+/* Container styling for login form */
+.login-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Title styling */
+.login-title {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.login-label {
+    font-size: 1rem;
+    color: #555;
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+}
+
+/* Input field styling */
+.login-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Submit button styling */
+.login-submit {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.login-submit:hover {
+    background-color: #45a049;
+}
+
+/* dashboard-css */
+
+/* Dashboard body styling */
+.dashboard-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/static/images/dash-board-pic.avif');
+    background-size: cover;
+    color: #333;
+    padding: 20px;
+}
+.dashboard-body::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    filter: brightness(50%); 
+    z-index: -1; 
+}
+
+/* Dashboard container styling */
+.dashboard-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    text-align: left;
+}
+
+/* Account details styling */
+.account-details {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Transactions section styling */
+.transactions-section {
+    margin-top: 30px;
+}
+
+/* Transactions header styling */
+.transactions-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.header-date, .header-time, .header-type, .header-amount {
+    width: 25%;
+    text-align: center;
+}
+
+/* Transactions list styling */
+.transactions-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.transaction-item {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+.transaction-date, .transaction-time, .transaction-type, .transaction-amount {
+    width: 25%;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Dashboard action buttons */
+.dashboard-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.action-button {
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.transaction-button {
+    background-color: #4CAF50;
+}
+
+.logout-button {
+    background-color: #FF6347;
+}
+
+.action-button:hover {
+    opacity: 0.9;
+}
+
+/* transactions-css */
+
+/* Enhanced Transaction Page Styles - Left Aligned */
+.transaction-body {
+    background-image: url('/static/images/payment-pic.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.transaction-body::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    filter: brightness(50%); 
+    z-index: -1; 
+}
+.transaction-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 420px;
+    text-align: left;  /* Align content to the left */
+    transition: transform 0.3s ease;
+}
+
+.transaction-container:hover {
+    transform: scale(1.02);
+}
+
+.transaction-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.transaction-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.form-label {
+    font-size: 1.1em;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #0056d2;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+#recipient_account_field {
+    display: none; /* Hidden initially */
+    width: 100%;
+}
+
+.submit-button {
+    background-color: #007bff;
+    color: white;
+    padding: 14px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.2);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 10px rgba(0, 123, 255, 0.3);
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 25px;
+    font-size: 0.95em;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: #0056b3;
+}
+
+
+/* register-css */
+
+/* Registration Page Styles */
+.register-body {
+    background-image: url('/static/images/register-pic.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.register-body::before {
+    content: ''; 
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: inherit;
+    background-size: cover;
+    filter: brightness(50%); 
+    z-index: -1; 
+}
+.register-container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 400px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.register-container:hover {
+    transform: scale(1.02);
+}
+
+.register-title {
+    font-size: 2em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center; /* Center-align the heading */
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-label {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 6px rgba(0, 123, 255, 0.4);
+}
+
+.register-button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 123, 255, 0.2);
+    width: 100%;
+}
+
+.register-button:hover {
+    background-color: #0056b3;
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+}

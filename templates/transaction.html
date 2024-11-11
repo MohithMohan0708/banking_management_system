@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script>
+        function toggleRecipientField() {
+            const transactionType = document.getElementById('transaction_type').value;
+            const recipientField = document.getElementById('recipient_account_field');
+            recipientField.style.display = transactionType === 'transfer' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body class="transaction-body">
+    <div class="transaction-container">
+        <h1 class="transaction-title">Make a Transaction</h1>
+        
+        <form method="POST" action="{{ url_for('transaction') }}" class="transaction-form">
+            <div class="form-group">
+                <label for="transaction_type" class="form-label">Transaction Type:</label>
+                <select id="transaction_type" name="transaction_type" class="form-input" onchange="toggleRecipientField()">
+                    <option value="deposit">Deposit</option>
+                    <option value="withdraw">Withdraw</option>
+                    <option value="transfer">Transfer</option>
+                </select>
+            </div>
+            
+            <div id="recipient_account_field" class="form-group" style="display: none;">
+                <label for="recipient_account_id" class="form-label">Recipient Account ID:</label>
+                <input type="text" id="recipient_account_id" name="recipient_account_id" class="form-input" placeholder="Enter recipient account ID">
+            </div>
+
+            <div class="form-group">
+                <label for="amount" class="form-label">Amount:</label>
+                <input type="number" id="amount" name="amount" class="form-input" step="0.01" required>
+            </div>
+            
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        
+        <a href="{{ url_for('dashboard') }}" class="back-link">Back to Dashboard</a>
+    </div>
+</body>
+</html>

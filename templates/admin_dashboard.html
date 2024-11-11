@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="admin-dashboard-body">
+    <div class="admin-dashboard-container">
+        <!-- Header Section -->
+        <header class="admin-dashboard-header">
+            <h1>Welcome, Admin: {{ username }}</h1>
+            <div class="dashboard-summary">
+                <div class="summary-card">
+                    <h2>Total Users</h2>
+                    <p>{{ total_users }}</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Total Transactions</h2>
+                    <p>{{ total_transactions }}</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Total Deposit</h2>
+                    <p>{{ total_deposit }}</p>
+                </div>
+                <div class="summary-card">
+                    <h2>Total Withdrawals</h2>
+                    <p>{{ total_withdrawal }}</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- User Management Section -->
+        <section class="admin-user-management">
+            <h2>User Management</h2>
+            <table class="user-table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>Name</th>
+                        <th>Status</th>
+                        <th>Balance</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.name }}</td>
+                        <td>{{ user.status }}</td>
+                        <td>{{ user.balance }}</td>
+                        <td>
+                            <button class="action-button">View</button>
+                            <button class="action-button">Deactivate</button>
+                            <button class="action-button">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Transaction Management Section -->
+        <section class="admin-transaction-management">
+            <h2>Recent Transactions</h2>
+            <table class="transaction-table">
+                <thead>
+                    <tr>
+                        <th>Transaction ID</th>
+                        <th>Type</th>
+                        <th>Amount</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for transaction in transactions %}
+                    <tr>
+                        <td>{{ transaction.id }}</td>
+                        <td>{{ transaction.type }}</td>
+                        <td>{{ transaction.amount }}</td>
+                        <td>{{ transaction.date }}</td>
+                        <td>{{ transaction.status }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Quick Actions Section -->
+        <section class="admin-quick-actions">
+            <h2>Quick Actions</h2>
+            <a href="{{ url_for('create_user') }}" class="action-button">Add New User</a>
+            <a href="{{ url_for('manage_transactions') }}" class="action-button">Manage Transactions</a>
+            <a href="{{ url_for('manage_accounts') }}" class="action-button">Manage Accounts</a>
+        </section>
+
+        <!-- Admin Settings Section -->
+        <section class="admin-settings">
+            <h2>Settings</h2>
+            <a href="{{ url_for('change_password') }}" class="action-button">Change Password</a>
+            <a href="{{ url_for('view_logs') }}" class="action-button">View Logs</a>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="admin-dashboard-footer">
+            <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body class="dashboard-body">
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Welcome, {{ username }}</h1>
+        
+        <div class="account-details">
+            <h2 class="section-title">Account Details</h2>
+            <p><strong>Account ID:</strong> {{ account.id }}</p>
+            <p><strong>Balance:</strong> Rs:{{ account.balance }}</p>
+        </div>
+
+        <div class="transactions-section">
+            <h2 class="section-title">Recent Transactions</h2>
+            <div class="transactions-header">
+                <span class="header-date">Date</span>
+                <span class="header-time">Time</span>
+                <span class="header-type">Type</span>
+                <span class="header-amount">Amount</span>
+            </div>
+            <ul class="transactions-list">
+                {% for transaction in transactions %}
+                    <li class="transaction-item">
+                        <span class="transaction-date">{{ transaction.date.strftime('%Y-%m-%d') }}</span>
+                        <span class="transaction-time">{{ transaction.date.strftime('%H:%M:%S') }}</span>
+                        <span class="transaction-type">{{ transaction.type }}</span>
+                        <span class="transaction-amount">Rs:{{ transaction.amount }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="dashboard-actions">
+            <a href="{{ url_for('transaction') }}" class="action-button transaction-button">Make a Transaction</a>
+            <a href="{{ url_for('logout') }}" class="action-button logout-button">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
